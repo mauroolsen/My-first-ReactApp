@@ -1,0 +1,17 @@
+$principal-color: #F3F9D2;
+$secondary-color: #BDC4A7; 
+$lines-color: #2f2f2f;
+$board-background: #92B4A7;
+
+@import "./styles/body";
+@import "./styles/board";
+@import "./styles/square";
+@import "./styles/game";
+
+.status {
+  margin-bottom: 10px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
