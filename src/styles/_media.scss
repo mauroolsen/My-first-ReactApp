@@ -5,28 +5,32 @@ Pantallas medianas (md, para tablets en horizontal)  ≥ 768px
 Pantallas grandes (lg, tamaño escritorio) ≥ 992px
 Pantallas extra grandes (xl, escritorio grande) ≥ 1200px
 */
-
-@media (min-width: 1200px) {
-    $square-size: 200px;
-    $square-font-size: 80px;
+$square-size: (
+  0px: 20px,
+  576px: 70px,
+  768px: 100px,
+  992px: 150px,
+  1200px: 200px,
+);
+$square-font-size: (
+  0px: 10px,
+  576px: 35px,
+  768px: 50px,
+  992px: 70px,
+  1200px: 80px,
+);
+@each $width-screen, $width in $square-font-size {
+  @media screen and (min-width: $width-screen) {
+    .square {
+      font-size: $width;
+    }
+  }
 }
-
-@media (min-width: 992px) {
-    $square-size: 200px;
-    $square-font-size: 80px;
-}
-
-@media (min-width: 768px) {
-    $square-size: 200px;
-    $square-font-size: 80px;
-}
-
-@media (min-width: 576px) {
-    $square-size: 200px;
-    $square-font-size: 80px;
-}
-
-@media (max-width: 576px) {
-    $square-size: 200px;
-    $square-font-size: 80px;
+@each $width-screen, $width in $square-size {
+  @media screen and (min-width: $width-screen) {
+    .square {
+      height: $width;
+      width: $width;
+    }
+  }
 }
