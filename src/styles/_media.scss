@@ -1,0 +1,32 @@
+/*
+Pantallas extra pequeñas (móviles) < 576px
+Pantallas pequeñas (_sm, tablets _en vertical) ≥ 576px
+Pantallas medianas (md, para tablets en horizontal)  ≥ 768px
+Pantallas grandes (lg, tamaño escritorio) ≥ 992px
+Pantallas extra grandes (xl, escritorio grande) ≥ 1200px
+*/
+
+@media (min-width: 1200px) {
+    $square-size: 200px;
+    $square-font-size: 80px;
+}
+
+@media (min-width: 992px) {
+    $square-size: 200px;
+    $square-font-size: 80px;
+}
+
+@media (min-width: 768px) {
+    $square-size: 200px;
+    $square-font-size: 80px;
+}
+
+@media (min-width: 576px) {
+    $square-size: 200px;
+    $square-font-size: 80px;
+}
+
+@media (max-width: 576px) {
+    $square-size: 200px;
+    $square-font-size: 80px;
+}

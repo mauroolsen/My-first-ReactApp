@@ -3,6 +3,7 @@ $secondary-color: #BDC4A7;
 $lines-color: #2f2f2f;
 $board-background: #92B4A7;
 
+@import "./styles/media";
 @import "./styles/body";
 @import "./styles/board";
 @import "./styles/square";
