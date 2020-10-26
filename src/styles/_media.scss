@@ -5,32 +5,50 @@ Pantallas medianas (md, para tablets en horizontal)  ≥ 768px
 Pantallas grandes (lg, tamaño escritorio) ≥ 992px
 Pantallas extra grandes (xl, escritorio grande) ≥ 1200px
 */
-$square-size: (
-  0px: 20px,
-  576px: 70px,
-  768px: 100px,
-  992px: 150px,
-  1200px: 200px,
+$extra-small: 576px;
+$small: 768px;
+$medium: 992px;
+$big: 1200px;
+$extra-big: 2000px;
+
+$block-size: (
+  0px: $extra-small/20,
+  $extra-small: $small/20,
+  $small: $medium/20,
+  $medium: $big/20,
+  $big: $extra-big/20,
+  $extra-big: 150,
 );
-$square-font-size: (
-  0px: 10px,
-  576px: 35px,
-  768px: 50px,
-  992px: 70px,
-  1200px: 80px,
-);
-@each $width-screen, $width in $square-font-size {
+
+@each $width-screen, $width in $block-size {
   @media screen and (min-width: $width-screen) {
     .square {
-      font-size: $width;
-    }
-  }
-}
-@each $width-screen, $width in $square-size {
-  @media screen and (min-width: $width-screen) {
-    .square {
+      font-size: $width/2;
       height: $width;
       width: $width;
+      line-height: $width/2;
+    }
+    body{
+      margin: $width/2;
+      font: $width/2;
+    }
+    .status {
+      margin-bottom: $width;
+    }
+    
+    ol, ul {
+      padding-left: $width*3;
+    }
+
+    .container-game{
+      margin-left: $width*3;
+      margin-top: $width;
+    }
+
+    .game-info {
+      margin-left: $width/2;
     }
   }
 }
+
+//-----------------------------------------------
