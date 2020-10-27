@@ -17,7 +17,7 @@ $block-size: (
   $small: $medium/20,
   $medium: $big/20,
   $big: $extra-big/20,
-  $extra-big: 150,
+  $extra-big: 150px,
 );
 
 @each $width-screen, $width in $block-size {
@@ -47,6 +47,34 @@ $block-size: (
 
     .game-info {
       margin-left: $width/2;
+    }
+
+    @if($width-screen==$small){
+      .game {
+        display: none;
+        flex-direction: row;
+      }
+      body{
+        background-color: green;
+      }
+    }
+    @if($width-screen==$extra-small){
+      .game {
+        display: none;
+        flex-direction: row;
+      }
+      body{
+        background-color: grey;
+      }
+    }
+    @if($width-screen==$big){
+      .game {
+        display: none;
+        flex-direction: row;
+      }
+      body{
+        background-color: red;
+      }
     }
   }
 }
